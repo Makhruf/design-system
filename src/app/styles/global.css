@@ -1,0 +1,17 @@
+.container {
+    background-color: #fbfbfe;
+display: contents;
+
+}
+
+.mainContent {
+    border: 1px solid #46a765;
+    background-color: #f3faf4;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
