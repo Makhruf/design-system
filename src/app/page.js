@@ -10,7 +10,11 @@ export default function Home() {
       <div className={styles.navBar}>Navbar 3</div>
 
     </div>
-      <div className={styles.sidebar}/> 
+    <div className={styles.sidebar}> 
+      <button className={styles.sidebarPage}>Login</button> 
+
+    </div>
+
       <div className="mainContent"> 
       <div className={styles.KontenUtama}>KontenUtama</div>
       </div>

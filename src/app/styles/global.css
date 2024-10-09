@@ -1,12 +1,12 @@
 .container {
-    background-color: #fbfbfe;
-display: contents;
+    background-color: #0000ff;
+    display: contents;
 
 }
 
 .mainContent {
     border: 1px solid #46a765;
-    background-color: #f3faf4;
+    background-color: #00f124;
     padding: 10px;
     display: flex;
     justify-content: center;
