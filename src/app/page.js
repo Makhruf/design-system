@@ -1,11 +1,24 @@
+'use client';
+
+import { useState } from 'react';
 import Head from 'next/head';
 import styles from './styles/page.module.css';
 
 export default function Home() {
+  // State untuk menyimpan status navbar mobile
+  const [isNavOpen, setIsNavOpen] = useState(false);
+
+  // Fungsi untuk toggle navigasi
+  const toggleNav = () => {
+    setIsNavOpen(!isNavOpen);
+  };
+
   return (
     <div className={styles.container}>
       <header className={styles.header}>
         <div className={styles.logo}>Logo</div>
+
+        {/* Navbar biasa */}
         <nav className={styles.nav}>
           <ul>
             <li>Navbar</li>
@@ -14,16 +27,27 @@ export default function Home() {
             <li>Navbar</li>
             <li>Navbar</li>
           </ul>
+          {/* Hamburger Icon */}
+          <button className={styles.hamburger} onClick={toggleNav}>
+            &#9776; {/* Icon hamburger (titik tiga) */}
+          </button>
         </nav>
       </header>
+
+      {/* Mobile Nav, muncul saat hamburger di klik */}
+      <nav className={`${styles.mobileNav} ${isNavOpen ? 'active' : ''}`}>
+        <ul>
+          <li>Navbar</li>
+          <li>Navbar</li>
+          <li>Navbar</li>
+          <li>Navbar</li>
+          <li>Navbar</li>
+        </ul>
+      </nav>
 
       <main className={styles.main}>
         <section className={styles.infoSection}>
           <h1>Main konten</h1>
-          {/* <p>
-            Platform yang menghadirkan layanan kesehatan berkualitas. Temukan
-            layanan terbaik untuk kesehatan Anda.
-          </p> */}
           <button className={styles.ctaButton}>button</button>
         </section>
 
